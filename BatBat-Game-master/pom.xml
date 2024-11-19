@@ -230,10 +230,28 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<groupId>org.sonarsource.scanner.maven</groupId>
-					<artifactId>sonar-maven-plugin</artifactId>
-					<version>3.7.0.1746</version>
-				</plugin>
+    <groupId>org.sonarsource.scanner.maven</groupId>
+    <artifactId>sonar-maven-plugin</artifactId>
+    <version>3.7.0.1746</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>sonar</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <!-- Clave del proyecto en SonarCloud -->
+        <sonar.projectKey>LyDH-Pruebas</sonar.projectKey>
+        <sonar.organization>EduardoLeonArv</sonar.organization>
+        <!-- Token de SonarCloud -->
+        <sonar.login>6e193f613eabc6aef8d13736221d2c537566de1a</sonar.login>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <!-- Opcional: excluir target -->
+        <sonar.exclusions>target/**</sonar.exclusions>
+    </configuration>
+</plugin>
+
 			</plugins>
 		</pluginManagement>
 
