@@ -36,6 +36,16 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <mainClass>al.tonikolaba.main.BatBatSpring</mainClass>
         <log4j2.version>2.17.1</log4j2.version>
+
+		<!-- Sonar Properties -->
+		<sonar.projectKey>al.tonikolaba:BatBat-Game</sonar.projectKey>
+		<sonar.organization>your-organization</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.login>your-generated-token</sonar.login>
+		<sonar.sources>src/main/java</sonar.sources>
+		<sonar.tests>src/test/java</sonar.tests>
+		<sonar.java.binaries>target/classes</sonar.java.binaries>
+    	<sonar.exclusions>**/.idea/**,**/.github/**,**/docs/**,**/target/**</sonar.exclusions>
     </properties>
 
     <dependencies>
@@ -185,11 +195,9 @@
 
             <!-- SonarCloud -->
             <plugin>
-				<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-				<sonar.sources>src/main/java</sonar.sources>
-				<sonar.tests>src/test/java</sonar.tests>
-				<sonar.java.binaries>target/classes</sonar.java.binaries>
-				<sonar.exclusions>**/.idea/**,**/.github/**,**/docs/**,**/target/**</sonar.exclusions>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version>
             </plugin>
         </plugins>
     </build>
