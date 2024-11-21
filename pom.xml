@@ -188,6 +188,9 @@
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>3.9.1.2184</version>
+				<sonar.sources>src/main/java</sonar.sources>
+				<sonar.tests>src/test/java</sonar.tests>
+				<sonar.java.binaries>target/classes</sonar.java.binaries>
             </plugin>
         </plugins>
     </build>
